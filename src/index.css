@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: "billie";
+    src: url("@assets/fonts/billie_eilish.woff2");
+}
+
+@font-face {
+    font-family: "lulo";
+    src: url("@assets/fonts/lulo_clean.woff2");
+}
+
+@font-face {
+    font-family: "bodoni";
+    src: url("@assets/fonts/bodoni_moda.woff2");
+}
+
+@font-face {
+    font-family: "space";
+    src: url("@assets/fonts/space_grotesk.woff2");
+}
+
+@font-face {
+    font-family: "bai";
+    src: url("@assets/fonts/bai_jamjuree.woff2");
+}
+
+:root {
+    --accent-color: #f9649d;
+    --primary-color: #fdf1f3;
+    --secondary-color: #fbb7bd;
+    --font-active-color: #930029;
+    --font-color: #c26970;
+}
+
+body {
+    background-attachment: fixed;
+    background-position: 47% 40%;
+}
