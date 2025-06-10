@@ -8,8 +8,14 @@ function BackgroundHandler() {
 
     useEffect(() => {
 
-        if(pathname === "/projects") {
-            document.body.style.backgroundImage = `url(${background})`;
+        document.body.style.backgroundImage = `url(${background})`;
+
+        if(pathname === "/projects" && !/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+            document.body.style.backgroundAttachment = "fixed";
+            document.body.style.backgroundPosition = "47% 40%";
+        } else if(pathname === "/projects" && /iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+            document.body.style.backgroundPosition = "center";
+            document.body.style.backgroundSize = "cover";
         } else {
             document.body.style.backgroundImage = "none";
             document.body.style.backgroundColor = location.pathname === "/about-me" ? "#e5a5cf" : "#fbb7bd";
