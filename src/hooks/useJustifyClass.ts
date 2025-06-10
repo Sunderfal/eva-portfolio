@@ -1,16 +1,13 @@
 import { projects } from "@const/projects";
-import type { Project } from "@interfaces/types";
 
-export function useJustifyClass(currentIndex: number, prevProject: Project | null): string {
+export function useJustifyClass(currentIndex: number): string {
 
-    let justifyClass: string = "start";
-
-    if(currentIndex > 0 && currentIndex < projects.length-1) {
-        justifyClass = "between";
-    } else if(!prevProject) {
-        justifyClass = "end";
+    if(currentIndex > 0 && currentIndex < projects.length - 1) {
+        return "justify-between";
+    } else if(currentIndex === projects.length-1) {
+        return "justify-start";
     }
 
-    return justifyClass;
+    return "justify-end";
 
 }

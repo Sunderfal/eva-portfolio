@@ -3,7 +3,7 @@ function Contact() {
     return (
         <div className="bg-[var(--accent-color)] py-8 mb-3 md:py-16">
                 
-            <div className="bg-[var(--secondary-color)] border border-white p-5 md:p-10 shadow-lg w-full md:mx-auto md:w-1/2">
+            <div className="bg-[var(--secondary-color)] border border-white p-5 md:p-10 shadow-lg w-full xl:mx-auto xl:w-1/2">
             
                 <div className="grid grid-cols-3 justify-items-center gap-3 text-center text-xs md:p-8 md:text-lg">
 

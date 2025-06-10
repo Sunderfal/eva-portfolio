@@ -19,11 +19,12 @@ function Portfolio() {
                 text-5xl
                 w-[90%] 
                 md:mb-0
-                md:w-1/5
+                md:w-1/3
+                xl:w-1/5
             ">
                 My portfolio
             </div>
-            <div className="columns-1 p-10 md:columns-3 md:gap-40 md:p-20">
+            <div className="columns-1 p-10 md:columns-3 md:gap-40 md:p-20 w-full">
                 {projects.map((project, index) => (
                     <ProjectItem key={index} project={project}/>
                 ))}

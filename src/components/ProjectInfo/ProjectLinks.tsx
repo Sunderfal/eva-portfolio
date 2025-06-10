@@ -12,11 +12,11 @@ function ProjectLinks({ currentIndex }: ProjectLinksProps) {
     const prevProject: Project | null = currentIndex > 0 ? projects[currentIndex-1] : null;
     const nextProject: Project | null = currentIndex < projects.length-1 ? projects[currentIndex+1] : null;
 
-    const justifyClass = useJustifyClass(currentIndex, prevProject);
+    const justifyClass = useJustifyClass(currentIndex);
 
     return (
         <>
-            <div className={`flex justify-${justifyClass} my-8 md:my-15`}>
+            <div className={`flex ${justifyClass} my-8 md:my-15`}>
                 {prevProject && (
                     <Link to={`/project/${prevProject.idName}`}>
                         <div className="flex items-center gap-2 text-xl text-white transition-opacity hover:opacity-60">

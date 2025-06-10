@@ -32,8 +32,9 @@ function ProjectItem({ project }: ProjectItemsProps) {
                         cursor-pointer
                         font-[billie]
                         opacity-0
-                        text-white
                         text-2xl
+                        text-center
+                        text-white
                         transition-opacity
                         duration-300
                         group-hover:opacity-100
