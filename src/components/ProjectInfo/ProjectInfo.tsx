@@ -9,7 +9,7 @@ function ProjectInfo({ project, onClick }: ProjectInfoInterface) {
 
     return (
         <>
-            <h1 className="text-5xl text-center md:text-start">{project?.title}</h1>
+            <h1 className={`text-5xl text-center ${project?.info.description ? "" : "mb-15"} md:text-start`}>{project?.title}</h1>
             {project?.info.description && <p className="font-bold my-15 text-xl text-justify">{project.info.description}</p>}
             <div className="flex flex-col gap-1">
                 {project?.info.videos?.map((video, index) => (
