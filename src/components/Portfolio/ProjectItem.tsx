@@ -18,7 +18,7 @@ function ProjectItem({ project }: ProjectItemsProps) {
             `}
         >
             <Link to={`/project/${project.idName}`}>
-                <picture className="group relative">
+                <div className="group relative">
                     <img className="object-cover w-full h-full" src={project.image} alt={project.title}/>
                     <span className="
                         flex
@@ -41,7 +41,7 @@ function ProjectItem({ project }: ProjectItemsProps) {
                     ">
                         {project.title}
                     </span>
-                </picture>
+                </div>
             </Link>
         </div>
     );
