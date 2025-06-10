@@ -22,7 +22,7 @@ function ProjectPage() {
     }, [projectIdName]);
 
     return (
-        <main className="font-[billie] px-10 text-[var(--font-active-color)] w-full md:mx-auto md:p-0 md:w-[45%]">
+        <main className="font-[billie] px-10 text-[var(--font-active-color)] w-full min-h-screen md:mx-auto md:p-0 md:w-[45%]">
             <ProjectInfo project={project} onClick={handleClick}/>
             <ProjectLinks currentIndex={currentIndex}/>
             {expandedImage && (
