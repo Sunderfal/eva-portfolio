@@ -5,7 +5,7 @@ interface UseInView {
     isVisible: boolean;
 }
 
-export function useInView(threshold = 0.1): UseInView {
+export function useInView(): UseInView {
 
     const ref = useRef<HTMLDivElement | null>(null);
     const [isVisible, setIsVisible] = useState<boolean>(false);
@@ -19,17 +19,17 @@ export function useInView(threshold = 0.1): UseInView {
                     observer.unobserve(entry.target);
                 }
             },
-            { threshold }
+            { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
         );
 
         if(ref.current) {
-            observer.observe(ref.current);
+            setTimeout(() => {
+                observer.observe(ref.current!);
+            }, 100);
         }
 
         return () => {
-            if(ref.current) {
-                observer.unobserve(ref.current);
-            }
+            observer.disconnect();
         };
 
     }, []);
