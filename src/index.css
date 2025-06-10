@@ -32,3 +32,27 @@
     --font-active-color: #930029;
     --font-color: #c26970;
 }
+
+body::before {
+    content: none;
+}
+
+body.projects-bg::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("@assets/images/projects/projects-background.webp");
+    background-position: 47% 40%;
+    z-index: -1;
+}
+
+body.about-bg {
+    background-color: #e5a5cf;
+}
+
+body.default-bg {
+    background-color: #fbb7bd;
+}
