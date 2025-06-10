@@ -17,9 +17,9 @@ function ProjectItem({ project }: ProjectItemsProps) {
                 mb-10 transition-all duration-1000 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"} md:mb-50
             `}
         >
-            <picture className="group relative">
-                <img className="object-cover w-full h-full" src={project.image} alt={project.title}/>
-                <Link to={`/project/${project.idName}`}>
+            <Link to={`/project/${project.idName}`}>
+                <picture className="group relative">
+                    <img className="object-cover w-full h-full" src={project.image} alt={project.title}/>
                     <span className="
                         flex
                         justify-center
@@ -41,8 +41,8 @@ function ProjectItem({ project }: ProjectItemsProps) {
                     ">
                         {project.title}
                     </span>
-                </Link>
-            </picture>
+                </picture>
+            </Link>
         </div>
     );
 
