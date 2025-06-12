@@ -15,11 +15,6 @@ This is a personal portfolio website developed for **Eva Góngora Fuentes**, des
 - 🌬️ **Tailwind CSS** – A utility-first CSS framework for rapid UI development.
 - ⚡ **Vite** – A lightning-fast build tool for modern web projects.
 
-## 🚀 Local Installation & Usage
+## 🚀 Check the project with the following URL
 
-```bash
-git clone https://github.com/yourusername/portfolio-eva.git
-cd portfolio-eva
-npm install
-npm run dev
-```
+https://eva-portfolio-tau.vercel.app
