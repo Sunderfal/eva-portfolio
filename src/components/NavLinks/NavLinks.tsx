@@ -1,22 +1,26 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 function NavLinks() {
 
     const [showNav, setShowNav] = useState<boolean>(false);
-    const [lastScrollY, setLastScrollY] = useState<number>(0);
-
+    const lastScrollY = useRef<number>(0);
+    
     const handleScroll = (): void => {
             
         const currentScrollY: number = window.scrollY;
 
-        setShowNav(currentScrollY < lastScrollY);
-        setLastScrollY(currentScrollY);
+        if(currentScrollY < 10) {
+            setShowNav(true);
+        } else {
+            setShowNav(currentScrollY < lastScrollY.current);
+        }
 
+        lastScrollY.current = currentScrollY;
     }
 
     useEffect(() => {
-
+        
         window.addEventListener("scroll", handleScroll);
 
         return () => window.removeEventListener("scroll", handleScroll);
