@@ -8,7 +8,7 @@ import ProjectPage from "@pages/ProjectPage";
 import ScrollHandler from "@components/ScrollHandler/ScrollHandler";
 
 function App() {
-    
+
     return (
         <BrowserRouter>
             <ScrollHandler/>

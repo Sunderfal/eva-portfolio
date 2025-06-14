@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { projects } from "@const/projects";
-import { useJustifyClass } from "@hooks/useJustifyClass";
+import { getJustifyClass } from "@utils/getJustifyClass";
 import type { Project } from "@interfaces/types";
 
 interface ProjectLinksProps {
@@ -12,7 +12,7 @@ function ProjectLinks({ currentIndex }: ProjectLinksProps) {
     const prevProject: Project | null = currentIndex > 0 ? projects[currentIndex-1] : null;
     const nextProject: Project | null = currentIndex < projects.length-1 ? projects[currentIndex+1] : null;
 
-    const justifyClass = useJustifyClass(currentIndex);
+    const justifyClass = getJustifyClass(currentIndex);
 
     return (
         <>
